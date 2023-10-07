@@ -10,6 +10,8 @@ export const WaitlistSignUp = () => {
   const [state, setState] = useState("");
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const [toggleInput, setToggleInput] = useState(true);
+  const [successful, setSuccessful] = useState(false);
 
   const handleChange = (event) => {
     setState(event.target.value);
@@ -23,6 +25,8 @@ export const WaitlistSignUp = () => {
     } else {
       setSuccessMessage("Successful");
       setError("");
+      setToggleInput(false);
+      setSuccessful(true);
     }
   };
 
@@ -62,33 +66,56 @@ export const WaitlistSignUp = () => {
         />
         <div
           className={`${
-            error || successMessage ? "lg:gap-[20px]" : "lg:gap-[40px]"
+            error ? "lg:gap-[40px]" : "lg:gap-[45px]"
           } flex flex-col gap-[55px] md:w-[50%] lg:w-[551px] `}
         >
           <p className="text-center text-[22px] text-[#344054] leading-[15px] lg:text-[32px]">
             Join The Waitlist
           </p>
           <div
-            className={`${
-              error || successMessage ? "gap-[13px]" : "gap-[20px]"
-            } flex flex-col md:flex-row lg:border-b-[1px] lg:border-b-[#04177f] lg:pb-[2.5%] lg:justify-between`}
+            className={`${error ? "gap-[13px]" : "gap-[20px]"} ${
+              successMessage ? "lg:border-b-[#17E506]" : "lg:border-b-[#04177f]"
+            } flex flex-col md:flex-row lg:border-b-[1px] lg:pb-[2.5%] lg:justify-between`}
           >
-            <input
-              className="pl-[5%] text-[16px] text-[#7e7e7e] border-b-[1px] border-b-[#04177f] pb-[3%] outline-none lg:pb-0 lg:text-[16px] lg:border-b-0"
-              type="email"
-              value={state}
-              onChange={handleChange}
-              placeholder="Enter your mail"
-            />
-            {error ? (
-              <p className="pl-[5%] text-[14px] text-[#F95252] md:hidden">
-                {error}
-              </p>
-            ) : (
-              <p className="pl-[5%] text-[16px] text-[#17E506] md:hidden">
-                {successMessage}
-              </p>
+            {toggleInput && (
+              <input
+                className="pl-[5%] text-[16px] text-[#7e7e7e] border-b-[1px] border-b-[#04177f] pb-[3%] outline-none lg:pb-0 lg:text-[16px] lg:border-b-0"
+                type="email"
+                value={state}
+                onChange={handleChange}
+                placeholder="Enter your mail"
+              />
             )}
+            {successful && (
+              <div className="px-[5%] flex justify-between items-center md:hidden border-b-[1px] border-b-[#17E506] pb-[3%]">
+                {" "}
+                <p className=" text-[16px] text-[#17E506]   md:hidden">
+                  {successMessage}
+                </p>
+                <img
+                  className="w-[40px] h-[40px]"
+                  src="./Images/checkMarkGif.gif"
+                  alt="gif"
+                />
+              </div>
+            )}
+
+            {successful && (
+              <div className="hidden md:flex justify-between items-center w-full pb-0">
+                <p className="text-[16px] text-[#17E506] md:block px-[5%]">
+                  {successMessage}
+                </p>
+                <img
+                  className="w-[40px] h-[40px]"
+                  src="./Images/checkMarkGif.gif"
+                  alt="gif"
+                />
+              </div>
+            )}
+            <p className="pl-[5%] text-[14px] text-[#F95252] md:hidden">
+              {error}
+            </p>
+
             <button
               onClick={handleSignUp}
               className="bg-[#04177f] text-[#fff] rounded-[13px] mx-[1%] text-[14px] px-[21.77px] py-[10px] md:mx-0 md:w-[100%] lg:w-[180px]"
@@ -96,15 +123,12 @@ export const WaitlistSignUp = () => {
               Sign Up
             </button>
           </div>
-          {error ? (
-            <p className="hidden pl-[5%] text-[16px] text-[#F95252] md:block">
-              {error}
-            </p>
-          ) : (
-            <p className="hidden pl-[5%] text-[16px] text-[#17E506] md:block">
-              {successMessage}
-            </p>
-          )}
+
+          <p className="hidden pl-[5%] text-[16px] text-[#F95252] md:block">
+            {error}
+          </p>
+
+          {/*  */}
         </div>
       </div>
 

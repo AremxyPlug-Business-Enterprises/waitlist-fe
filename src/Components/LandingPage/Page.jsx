@@ -192,7 +192,7 @@ const Page = () => {
 
           <HashLink
             to="#signup"
-            className="mx-auto flex text-[12px] bg-[#04177F] text-[#ffffff] w-[28%] h-[35px] justify-center items-center rounded-md md:mx-[0px] md:text-[14px] lg:w-[20%] lg:h-[45px]"
+            className="mx-auto flex text-[12px] bg-[#04177F] text-[#ffffff] w-[28%] h-[35px] justify-center items-center rounded-md md:mx-[0px] md:text-[14px] lg:w-[20%] lg:h-[40px]"
           >
             Learn more
           </HashLink>
@@ -227,11 +227,10 @@ const Page = () => {
                 We offer secure VTU development, affordable airtime, and data
                 purchase.
               </div>
-              <HashLink
-                to="#signup"
-                className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[45px]"
-              >
-                Learn More
+              <HashLink to="#signup">
+                <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[40px]">
+                  Learn More
+                </div>
               </HashLink>
             </div>
           </div>
@@ -249,11 +248,10 @@ const Page = () => {
                 Our payment solutions ensure our clients have the utmost control
                 of their finances.
               </div>
-              <HashLink
-                to="#signup"
-                className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[45px]"
-              >
-                Learn More
+              <HashLink to="#signup">
+                <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[40px]">
+                  Learn More
+                </div>
               </HashLink>
             </div>
           </div>
@@ -271,11 +269,10 @@ const Page = () => {
                 We issue 3D secured virtual and physical debit USD and NGN cards
                 to both individuals and businesses.
               </div>
-              <HashLink
-                to="#signup"
-                className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[45px]"
-              >
-                Learn More
+              <HashLink to="#signup">
+                <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[40px] lg:w-[40%]">
+                  Learn More
+                </div>
               </HashLink>
             </div>
           </div>
@@ -294,11 +291,10 @@ const Page = () => {
                 We offer a variety of digital services that can be customized to
                 fit your company's needs.
               </div>
-              <HashLink
-                to="#signup"
-                className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[45px]"
-              >
-                Learn More
+              <HashLink to="#signup">
+                <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[40px] ">
+                  Learn More
+                </div>
               </HashLink>
             </div>
           </div>
@@ -316,11 +312,11 @@ const Page = () => {
                 We develop a VTU website with services like airtime top-up, data
                 bundles, and bills payment platform.
               </div>
-              <HashLink
-                to="#signup"
-                className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[45px]"
-              >
-                Learn More
+              <HashLink to="#signup">
+                {" "}
+                <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[40px] lg:w-[40%]">
+                  Learn More
+                </div>
               </HashLink>
             </div>
           </div>
@@ -338,11 +334,11 @@ const Page = () => {
                 When it comes to business development, trust us to save you time
                 and stress.
               </div>
-              <HashLink
-                to="#signup"
-                className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[45px]"
-              >
-                Learn More
+              <HashLink to="#signup">
+                {" "}
+                <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:text-[14px] lg:h-[40px]">
+                  Learn More
+                </div>
               </HashLink>
             </div>
           </div>
@@ -364,11 +360,11 @@ const Page = () => {
                   We offer a variety of digital services that can be customized
                   to fit your company's needs.
                 </div>
-                <HashLink
-                  to="#signup"
-                  className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md"
-                >
-                  Learn More
+                <HashLink to="#signup">
+                  {" "}
+                  <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md">
+                    Learn More
+                  </div>
                 </HashLink>
               </div>
             </div>
@@ -384,11 +380,10 @@ const Page = () => {
                   We develop a VTU website with services like airtime top-up,
                   data bundles, and bills payment platform.
                 </div>
-                <HashLink
-                  to="#signup"
-                  className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:h-[45px]"
-                >
-                  Learn More
+                <HashLink to="#signup">
+                  <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:h-[45px]">
+                    Learn More
+                  </div>
                 </HashLink>
               </div>
             </div>
@@ -406,11 +401,10 @@ const Page = () => {
                   When it comes to business development, trust us to save you
                   time and stress.
                 </div>
-                <HashLink
-                  to="#signup"
-                  className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:h-[45px]"
-                >
-                  Learn More
+                <HashLink to="#signup">
+                  <div className="bg-[#04177f] mt-[10%] w-[35%] text-[9px] text-[#ffffff] p-[3%] text-center rounded-md lg:h-[45px]">
+                    Learn More
+                  </div>
                 </HashLink>
               </div>
             </div>{" "}
@@ -426,9 +420,8 @@ const Page = () => {
           </div>
         </div>
       </div>
- 
-        <WaitlistSignUp />
-    
+
+      <WaitlistSignUp />
     </div>
   );
 };

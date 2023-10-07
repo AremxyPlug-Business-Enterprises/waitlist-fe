@@ -145,7 +145,13 @@ export const NavBar = () => {
         </ul>
 
         <div className="flex justify-center bg-[#04177F] rounded-md text-[#ffffff] text-[7px] p-[1%] w-[14%] lg:w-[14.5%] lg:text-[13px]">
-          Contact Us
+          <a
+            href="mailto:hello@aremxyplug.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Contact Us
+          </a>
         </div>
       </div>
     </>

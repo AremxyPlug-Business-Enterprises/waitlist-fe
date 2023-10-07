@@ -51,7 +51,7 @@ const Page = () => {
         </div>
         <img
           className="mx-auto mt-[12%] md:w-[40%] md:h-[30%] lg:w-[50%] lg:h-[40%]"
-          src="./Images/desktop.png"
+          src="./Images/desktop:phone.png"
           alt="/"
         />
       </div>
@@ -426,10 +426,9 @@ const Page = () => {
           </div>
         </div>
       </div>
-      {/* <div id="signup"> */}
-        {" "}
+ 
         <WaitlistSignUp />
-      {/* </div> */}
+    
     </div>
   );
 };

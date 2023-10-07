@@ -83,7 +83,13 @@ export const NavBar = () => {
               onClick={() => setNavOpen((prev) => !prev)}
               className="bg-[#ffffff] text-[#04177f] text-[8px] p-2 rounded-md"
             >
-              <a href="/aremxyplug@gmail.com">Contact Us</a>
+              <a
+                href="mailto:hello@aremxyplug.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Contact Us
+              </a>
             </li>
           </ul>
         </div>

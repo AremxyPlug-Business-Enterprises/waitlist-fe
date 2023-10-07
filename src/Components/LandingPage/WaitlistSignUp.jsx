@@ -78,7 +78,7 @@ export const WaitlistSignUp = () => {
               type="email"
               value={state}
               onChange={handleChange}
-              placeholder="Habib@aremxy.com"
+              placeholder="Enter your mail"
             />
             {error ? (
               <p className="pl-[5%] text-[14px] text-[#F95252] md:hidden">
@@ -116,19 +116,51 @@ export const WaitlistSignUp = () => {
         <p className="text-[16px] text-center"> Follow Us on</p>
         <div className="mb-[40%] flex gap-[29px] w-[282px] mx-auto text-[31px] md:mb-[20%] lg:mb-[10%]">
           <div className="hover:text-[#04177f]">
-            <BsLinkedin />
+            <a
+              href="https://www.linkedin.com/company/aremxyplug-business-enterprises/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              <BsLinkedin />
+            </a>
           </div>
           <div className="hover:text-[#04177f]">
-            <GrFacebook />
+            <a
+              href="https://m.facebook.com/102536649209580/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GrFacebook />
+            </a>
           </div>
           <div className="hover:text-[#04177f]">
-            <ImInstagram />
+            <a
+              href="https://www.instagram.com/aremxyplug"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ImInstagram />
+            </a>
           </div>
           <div className="hover:text-[#04177f]">
-            <RiTwitterXLine />
+            <a
+              href="https://twitter.com/aremxyplugs?t=WpUYIAyIyHGlliPCqO9a4Q&s=09"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              <RiTwitterXLine />
+            </a>
           </div>
           <div className="hover:text-[#04177f]">
-            <GrMail />
+            <a
+              href="mailto:hello@aremxyplug.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GrMail />
+            </a>
           </div>
         </div>
       </div>

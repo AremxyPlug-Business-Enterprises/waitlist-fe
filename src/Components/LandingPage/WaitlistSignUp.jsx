@@ -5,6 +5,7 @@ import { ImInstagram } from "react-icons/im";
 import { RiTwitterXLine } from "react-icons/ri";
 import { GrMail } from "react-icons/gr";
 import { useState } from "react";
+import axios from "axios";
 
 export const WaitlistSignUp = () => {
   const [state, setState] = useState("");
@@ -27,6 +28,23 @@ export const WaitlistSignUp = () => {
       setError("");
       setToggleInput(false);
       setSuccessful(true);
+
+      const data = { email: state };
+
+      const config = {
+        headers: { "Content-Type": "application/json" },
+      };
+
+      const url = "https://aremxy-waitlist.onrender.com/api/addWaitlist";
+
+      axios
+        .post(url, data, config)
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error.message);
+        });
     }
   };
 
@@ -82,7 +100,9 @@ export const WaitlistSignUp = () => {
                 className="pl-[5%] text-[16px] text-[#7e7e7e] border-b-[1px] border-b-[#04177f] pb-[3%] outline-none lg:pb-0 lg:text-[16px] lg:border-b-0"
                 type="email"
                 value={state}
+                name="email"
                 onChange={handleChange}
+                autoComplete="on"
                 placeholder="Enter your mail"
               />
             )}

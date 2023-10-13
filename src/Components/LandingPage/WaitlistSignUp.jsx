@@ -6,6 +6,8 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { GrMail } from "react-icons/gr";
 import { useState } from "react";
 import axios from "axios";
+import { Loader } from "../Loader/Loader";
+import Modal from "../Modal/Modal";
 
 export const WaitlistSignUp = () => {
   const [state, setState] = useState("");
@@ -13,38 +15,43 @@ export const WaitlistSignUp = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [toggleInput, setToggleInput] = useState(true);
   const [successful, setSuccessful] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (event) => {
     setState(event.target.value);
   };
 
-  const handleSignUp = () => {
-    const regEx = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
-    if (!regEx.test(state)) {
-      setError("Invalid Email...");
-      setSuccessMessage("");
-    } else {
-      setSuccessMessage("Successful");
-      setError("");
-      setToggleInput(false);
-      setSuccessful(true);
+  const handleSignUp = async () => {
+    setLoading(true);
+    try {
+      const regEx = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+      if (!regEx.test(state)) {
+        setError("Invalid Email...");
+        setSuccessMessage("");
+      } else {
+        const data = { email: state };
+        const config = {
+          headers: { "Content-Type": "application/json" },
+        };
+        const url =
+          "https://waitlist-api-production-0759.up.railway.app/api/addWaitlist";
 
-      const data = { email: state };
-
-      const config = {
-        headers: { "Content-Type": "application/json" },
-      };
-
-      const url = "https://aremxy-waitlist.onrender.com/api/addWaitlist";
-
-      axios
-        .post(url, data, config)
-        .then((response) => {
-          console.log(response.data);
-        })
-        .catch((error) => {
-          console.log(error.message);
-        });
+        const response = await axios.post(url, data, config);
+        console.log(response);
+        if (response.status === 200) {
+          setSuccessMessage("Successful");
+          setError("");
+          setToggleInput(false);
+          setSuccessful(true);
+        } else if (response.status === 208) {
+          setError("This email is already registered with us");
+          setSuccessMessage("");
+        }
+      }
+    } catch (error) {
+      alert(error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -208,6 +215,11 @@ export const WaitlistSignUp = () => {
           </div>
         </div>
       </div>
+      {loading && (
+        <Modal>
+          <Loader />
+        </Modal>
+      )}
     </div>
   );
 };

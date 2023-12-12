@@ -33,8 +33,7 @@ export const WaitlistSignUp = () => {
         const config = {
           headers: { "Content-Type": "application/json" },
         };
-        const url =
-          "https://waitlist-api-production-0759.up.railway.app/api/addWaitlist";
+        const url = "https://waitlist-5div.onrender.com/api/addWaitlist";
 
         const response = await axios.post(url, data, config);
         console.log(response);
@@ -116,7 +115,7 @@ export const WaitlistSignUp = () => {
             {successful && (
               <div className="px-[5%] flex justify-between items-center md:hidden border-b-[1px] border-b-[#17E506] pb-[3%]">
                 {" "}
-                <p className=" text-[16px] text-[#17E506]   md:hidden">
+                <p className=" text-[16px] text-[#17E506] md:hidden">
                   {successMessage}
                 </p>
                 <img

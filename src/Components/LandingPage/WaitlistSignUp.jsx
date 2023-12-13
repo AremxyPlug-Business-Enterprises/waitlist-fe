@@ -33,7 +33,7 @@ export const WaitlistSignUp = () => {
         const config = {
           headers: { "Content-Type": "application/json" },
         };
-        const url = "https://waitlist-5div.onrender.com/api/addWaitlist";
+        const url = "https://waitlist-api-69pl.onrender.com/api/addWaitlist";
 
         const response = await axios.post(url, data, config);
         console.log(response);
@@ -103,7 +103,7 @@ export const WaitlistSignUp = () => {
           >
             {toggleInput && (
               <input
-                className="pl-[5%] text-[16px] text-[#7e7e7e] border-b-[1px] border-b-[#04177f] pb-[3%] outline-none lg:pb-0 lg:text-[16px] lg:border-b-0"
+                className="pl-[2%] text-[16px] text-[#7e7e7e] border-b-[1px] border-b-[#04177f] pb-[3%] outline-none lg:pb-0 lg:text-[16px] lg:border-b-0"
                 type="email"
                 value={state}
                 name="email"
